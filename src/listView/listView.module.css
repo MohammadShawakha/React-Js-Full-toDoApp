@@ -1,0 +1,8 @@
+.listCol {
+  background-color: burlywood;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  justify-items: center;
+}

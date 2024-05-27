@@ -1,0 +1,43 @@
+.center {
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 3%;
+  margin: 0%;
+}
+
+.spinner {
+  border: 10px dotted white;
+  filter: blur(0.5px);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.spinner:hover {
+  animation: spin 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 20px;
+  accent-color: lime;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  outline: 5px rgb(255, 0, 0);
+}

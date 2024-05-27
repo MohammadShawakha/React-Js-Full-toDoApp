@@ -1,0 +1,17 @@
+.floatingActionBtn {
+  position: fixed;
+  background-color: lime;
+  border-radius: 50%;
+  border: none;
+  bottom: 0px;
+  right: 0px;
+  margin: 2%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.floatingActionBtn:hover {
+  background-color: rgba(45, 252, 45, 0.9);
+}

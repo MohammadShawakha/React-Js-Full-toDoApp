@@ -1,0 +1,9 @@
+.taskRow {
+  width: 80%;
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  justify-items: center;
+}
