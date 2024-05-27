@@ -6,9 +6,11 @@ import FloatingActionBtn from "/src/floatingActionBtn/floatingActionBtn.jsx";
 function ListView(props) {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("111111");
+  const [visbel, setVisbel] = useState(false);
 
   const add = (text1) => {
     setTasks([...tasks, load(text1)]);
+    setInput("");
   };
 
   function handeInputChange(event) {
@@ -17,10 +19,29 @@ function ListView(props) {
 
   return (
     <>
-      <input type="text" value={input} onChange={handeInputChange} />
+      {visbel && (
+        <div>
+          <input type="text" value={input} onChange={handeInputChange} />
+
+          <button
+            onClick={() => {
+              add(input);
+            }}
+          >
+            add
+          </button>
+          <button
+            onClick={() => {
+              setVisbel(false);
+            }}
+          >
+            cansle
+          </button>
+        </div>
+      )}
       <FloatingActionBtn
         do={() => {
-          add(input);
+          setVisbel(true);
         }}
         text="+"
       />
