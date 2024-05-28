@@ -2,6 +2,7 @@ import styles from "/src/listView/listView.module.css";
 import Task from "/src/task/task.jsx";
 import React, { useState } from "react";
 import FloatingActionBtn from "/src/floatingActionBtn/floatingActionBtn.jsx";
+import InputBox from "/src/inputBox/inputBox.jsx";
 
 function ListView(props) {
   const [tasks, setTasks] = useState([]);
@@ -20,24 +21,17 @@ function ListView(props) {
   return (
     <>
       {visbel && (
-        <div>
-          <input type="text" value={input} onChange={handeInputChange} />
-
-          <button
-            onClick={() => {
-              add(input);
-            }}
-          >
-            New Task
-          </button>
-          <button
-            onClick={() => {
-              setVisbel(false);
-            }}
-          >
-            cansle
-          </button>
-        </div>
+        <InputBox
+          newTaskOnClick={() => {
+            add(input);
+          }}
+          cancelOnClick={() => {
+            setVisbel(false);
+            setInput("");
+          }}
+          inputProp={input}
+          handeInputChangeProp={handeInputChange}
+        />
       )}
       <FloatingActionBtn
         do={() => {
