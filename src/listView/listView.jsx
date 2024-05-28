@@ -28,7 +28,7 @@ function ListView(props) {
               add(input);
             }}
           >
-            add
+            New Task
           </button>
           <button
             onClick={() => {
