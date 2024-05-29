@@ -24,6 +24,7 @@ function ListView(props) {
         <InputBox
           newTaskOnClick={() => {
             add(input);
+            setVisbel(false);
           }}
           cancelOnClick={() => {
             setVisbel(false);
