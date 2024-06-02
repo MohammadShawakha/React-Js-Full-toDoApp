@@ -8,7 +8,9 @@ import ListView from "./listView/listView.jsx";
 function App() {
   return (
     <>
-      <ListView listTitle="To Do" />
+      <div className="bg">
+        <ListView listTitle="To Do" />
+      </div>
     </>
   );
 }

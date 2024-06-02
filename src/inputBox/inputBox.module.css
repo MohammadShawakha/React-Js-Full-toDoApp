@@ -1,7 +1,7 @@
 .floatingContainer {
   position: fixed;
-  bottom: 50vh;
-  right: 50vw;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   background-color: deeppink;
@@ -10,6 +10,9 @@
 }
 
 .overLay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0));
   width: 100vw;
   height: 100vh;
@@ -18,4 +21,10 @@
   left: 0px;
 
   backdrop-filter: blur(10px);
+}
+input[type="text"] {
+  margin: 3%;
+  resize: none;
+  overflow: hidden;
+  word-break: break-word;
 }

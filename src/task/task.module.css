@@ -1,9 +1,33 @@
 .taskRow {
-  width: 80%;
-  background-color: blueviolet;
+  width: 80dvw;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.25)
+  );
+  border-radius: 7px;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   gap: 0.5rem;
   padding: 0.5rem;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 20px;
+  accent-color: #ffcc70;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+label {
+  width: fit-content;
+  max-width: 50dvw;
+  overflow: hidden;
+  padding: 5px;
+  overflow-wrap: break-word;
 }

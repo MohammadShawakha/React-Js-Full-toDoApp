@@ -41,7 +41,7 @@ function ListView(props) {
         text="+"
       />
       <h1>{props.listTitle}</h1>
-      <div className={styles.listCol}>{tasks}</div>
+      <div className={styles.listCol}>{...tasks}</div>
     </>
   );
 }
