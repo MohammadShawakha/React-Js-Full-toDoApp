@@ -1,6 +1,12 @@
 .floatingActionBtn {
   position: fixed;
   background-color: #4158d0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.25)
+  );
+
   border-radius: 50%;
   border: none;
   bottom: 0px;
@@ -13,5 +19,22 @@
 }
 
 .floatingActionBtn:hover {
-  background-color: #5065d0;
+  background-color: #4158d0;
+  animation: waving 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waving {
+  0% {
+    background-color: #4158d0;
+  }
+  33% {
+    background-color: #c850c0;
+  }
+  66% {
+    background-color: #ffcc70;
+  }
+  100% {
+    background-color: #4158d0;
+  }
 }
