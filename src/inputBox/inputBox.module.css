@@ -33,6 +33,7 @@
 
   backdrop-filter: blur(4px);
 }
+
 input[type="text"] {
   margin: 3%;
   resize: none;

@@ -26,15 +26,15 @@
 
 @keyframes waving {
   0% {
-    background-color: #4158d0;
+    background-color: #4159d044;
   }
   33% {
-    background-color: #c850c0;
+    background-color: #c850c044;
   }
   66% {
-    background-color: #ffcc70;
+    background-color: #ffcd7044;
   }
   100% {
-    background-color: #4158d0;
+    background-color: #4159d044;
   }
 }

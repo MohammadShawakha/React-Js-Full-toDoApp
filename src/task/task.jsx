@@ -1,6 +1,6 @@
 import styles from "/src/task/task.module.css";
-import Btn1 from "/src/btn1/btn1.jsx";
-
+import { useState } from "react";
+import DropDown from "../dropDown/dropDown.jsx";
 function Task(props) {
   return (
     <div
@@ -10,8 +10,9 @@ function Task(props) {
       onDragEnter={props.onDragedOver}
       onDragEnd={props.onEnd}
     >
-      <input type="checkbox" /> <label>{props.taskText}</label>
-      <Btn1 text="&#65049;" />
+      <input type="checkbox" />
+      <label>{props.taskText}</label>
+      <DropDown text="&#65049;" onEdit={props.onEditTask} />
     </div>
   );
 }

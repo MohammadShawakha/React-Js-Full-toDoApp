@@ -5,6 +5,7 @@
     rgba(255, 255, 255, 0.45),
     rgba(255, 255, 255, 0.25)
   );
+
   border-radius: 7px;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -12,6 +13,9 @@
   padding: 0.5rem;
   align-items: center;
   justify-content: center;
+}
+.taskRow::before {
+  backdrop-filter: blur(4px);
 }
 
 input[type="checkbox"] {

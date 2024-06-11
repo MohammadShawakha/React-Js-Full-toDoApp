@@ -49,7 +49,7 @@ function ListView(props) {
       )}
       <FloatingActionBtn
         do={() => {
-          setVisbel(true);
+          setVisbel(!visbel);
         }}
         text="+"
       />
@@ -62,6 +62,7 @@ function ListView(props) {
             onDraged={() => (draged.current = i)}
             onDragedOver={() => (dragedOver.current = i)}
             onEnd={handelSwap}
+            onEditTask={null}
           ></Task>
         ))}
       </div>
