@@ -9,7 +9,7 @@ function ListView(props) {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("111111");
   const [visbel, setVisbel] = useState(false);
-
+  console.log(tasks);
   const add = (text1) => {
     setTasks([...tasks, text1]);
     setInput("");
@@ -23,6 +23,11 @@ function ListView(props) {
     const temp = [...tasks];
     temp[index] = newText;
     setTasks(temp);
+  }
+  function handelDelete(index) {
+    const temp = [...tasks];
+    temp.splice(index, 1);
+    setTasks([...temp]);
   }
 
   const draged = useRef(0);
@@ -66,6 +71,7 @@ function ListView(props) {
           <Task
             taskText={item}
             handelEdit={handelEdit}
+            handelDelete={handelDelete}
             key={i}
             taskIndex={i}
             onDraged={() => (draged.current = i)}

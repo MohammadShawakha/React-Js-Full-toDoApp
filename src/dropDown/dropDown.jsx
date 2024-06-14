@@ -21,7 +21,14 @@ function DropDown(props) {
           >
             Edit
           </a>
-          <a>Delete</a>
+          <a
+            onClick={() => {
+              props.onDelete();
+              handelClick();
+            }}
+          >
+            Delete
+          </a>
         </div>
       )}
     </div>

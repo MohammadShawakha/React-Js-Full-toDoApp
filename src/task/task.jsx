@@ -46,6 +46,7 @@ function Task(props) {
             setVisbel(true);
             setInput(props.taskText);
           }}
+          onDelete={() => props.handelDelete(index)}
         />
       </div>
     </>
