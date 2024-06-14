@@ -8,11 +8,13 @@ function InputBox(props) {
           <input
             type="text"
             value={props.inputProp}
-            onChange={props.handeInputChangeProp}
+            onChange={props.handelInputChangeProp}
             autoFocus
           />
           <span>
-            <button onClick={props.newTaskOnClick}>New Task</button>
+            <button onClick={props.newTaskOnClick}>
+              {props.actionBtnText}
+            </button>
             <button onClick={props.cancelOnClick}>cancel</button>
           </span>
         </div>

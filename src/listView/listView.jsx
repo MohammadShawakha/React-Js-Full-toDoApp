@@ -15,8 +15,14 @@ function ListView(props) {
     setInput("");
   };
 
-  function handeInputChange(event) {
+  function handelInputChange(event) {
     setInput(event.target.value);
+  }
+
+  function handelEdit(index, newText) {
+    const temp = [...tasks];
+    temp[index] = newText;
+    setTasks(temp);
   }
 
   const draged = useRef(0);
@@ -35,6 +41,7 @@ function ListView(props) {
     <>
       {visbel && (
         <InputBox
+          actionBtnText="New Task"
           newTaskOnClick={() => {
             add(input);
             setVisbel(false);
@@ -44,7 +51,7 @@ function ListView(props) {
             setInput("");
           }}
           inputProp={input}
-          handeInputChangeProp={handeInputChange}
+          handelInputChangeProp={handelInputChange}
         />
       )}
       <FloatingActionBtn
@@ -58,11 +65,12 @@ function ListView(props) {
         {tasks.map((item, i) => (
           <Task
             taskText={item}
+            handelEdit={handelEdit}
             key={i}
+            taskIndex={i}
             onDraged={() => (draged.current = i)}
             onDragedOver={() => (dragedOver.current = i)}
             onEnd={handelSwap}
-            onEditTask={null}
           ></Task>
         ))}
       </div>

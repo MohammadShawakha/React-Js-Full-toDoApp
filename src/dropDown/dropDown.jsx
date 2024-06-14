@@ -7,13 +7,20 @@ function DropDown(props) {
     setOpened(!opened);
   }
   return (
-    <div className={styles.dropDown}>
-      <button className={styles.dropDownBtn} onClick={handelClick}>
+    <div className={styles.dropDown} onMouseLeave={handelClick}>
+      <button className={styles.dropDownBtn} onMouseOver={handelClick}>
         {props.text}
       </button>
       {opened && (
         <div className={styles.contant}>
-          <a onClick={props.onEdit}>Edit</a>
+          <a
+            onClick={() => {
+              props.onEdit();
+              handelClick();
+            }}
+          >
+            Edit
+          </a>
           <a>Delete</a>
         </div>
       )}
