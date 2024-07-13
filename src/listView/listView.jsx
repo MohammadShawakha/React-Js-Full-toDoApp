@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 function ListView(props) {
   const [tasks, setTasks] = useState([]);
-  const [input, setInput] = useState("111111");
+  const [input, setInput] = useState("");
   const [visbel, setVisbel] = useState(false);
   console.log(tasks);
   const add = (text1) => {
