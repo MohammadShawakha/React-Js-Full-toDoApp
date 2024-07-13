@@ -4,10 +4,13 @@ import { useState } from "react";
 function DropDown(props) {
   const [opened, setOpened] = useState(false);
   function handelClick() {
-    setOpened(!opened);
+    setOpened(true);
+  }
+  function handelLeave() {
+    setOpened(false);
   }
   return (
-    <div className={styles.dropDown} onMouseLeave={handelClick}>
+    <div className={styles.dropDown} onMouseLeave={handelLeave}>
       <button className={styles.dropDownBtn} onMouseOver={handelClick}>
         {props.text}
       </button>
@@ -16,7 +19,7 @@ function DropDown(props) {
           <a
             onClick={() => {
               props.onEdit();
-              handelClick();
+              handelLeave();
             }}
           >
             Edit
@@ -24,7 +27,7 @@ function DropDown(props) {
           <a
             onClick={() => {
               props.onDelete();
-              handelClick();
+              handelLeave();
             }}
           >
             Delete
